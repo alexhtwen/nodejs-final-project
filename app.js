@@ -25,8 +25,8 @@ app.get('/', async (req, res) => {
     //     userArr.push(doc.data().name);
     // })
     res.render('default', {
-        title: '首頁',
-        users: ['Fisheep', 'Fiona', 'Alice', 'Bob']
+        title: '台大資訊訓練班332期node.js課期末作業--Alex',
+        users: ['Alex', 'Marrianne', 'Rebecca', 'Thomas', 'Asing']
         //users: userArr
     });
 });
@@ -78,18 +78,25 @@ app.get('/who/:name', (req, res) => {
 
 app.get('/API/deleteMember', (req, res) => {
     db.collection('classA').doc(req.query.id).delete();
-    console.log(req.query.id);
-    res.send(`delete Member id = ${req.query.id}!`)
+    // console.log(req.query.id);
+    // res.send(`delete Member id = ${req.query.id}!`)
+    let prompt = `Member id: ${req.query.id} deleted.`;
+    // console.log(prompt);
+    console.log(`log: ${prompt}`);
+    res.send(`${prompt}`);
 })
 
 app.get('/API/addMember', (req, res) => {
-    db.collection('classA').add({
+    let thisMember = {
         name: req.query.name,
         gender: req.query.age,
         age: req.query.gender
+    }
+    db.collection('classA').add({
+        thisMember
     });
-    console.log("Add member !!");
-    res.send("Add member success!");
+    console.log(`log: Member ${thisMember.name} successfully added.`);
+    res.send(`Member ${thisMember.name} successfully added.`);
 })
 
 app.get('*', (req, res) => {
@@ -99,5 +106,5 @@ app.get('*', (req, res) => {
 let port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    console.log('Listening on port 3000');
+    console.log(`Hey, I am listening on port ${3000}.`);
 });
