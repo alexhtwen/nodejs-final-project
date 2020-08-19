@@ -1,7 +1,7 @@
 /* jshint esversion: 8 */
 let express = require('express');
 let firebase = require('firebase')
-var firebaseConfig = {
+let firebaseConfig = {
     apiKey: "AIzaSyBw_IQD3e9D_YmfNAgLwg6ky8O87TKv6cA",
     authDomain: "nodejs-test-9e44f.firebaseapp.com",
     databaseURL: "https://nodejs-test-9e44f.firebaseio.com",
@@ -24,9 +24,12 @@ app.get('/', async (req, res) => {
     //     console.log(doc.data().name)
     //     userArr.push(doc.data().name);
     // })
-    res.render('default', {
+
+    // res.render('default', {
+    res.render('home', {
         title: '台大資訊訓練班332期node.js課期末作業--Alex',
-        users: ['Alex', 'Marrianne', 'Rebecca', 'Thomas', 'Asing']
+        // users: ['Alex', 'Marrianne', 'Rebecca', 'Thomas', 'Asing']
+        routes: ['/', 'alex', 'firebase-test', '/who/:name', '/API/addMember', '/API/deleteMember']
         //users: userArr
     });
 });
@@ -72,7 +75,7 @@ app.get("/classA_frontend", (req, res) => {
 })
 
 app.get('/who/:name', (req, res) => {
-    var name = req.params.name;
+    let name = req.params.name;
     res.send(`This is ${name}`);
 });
 
@@ -103,8 +106,8 @@ app.get('*', (req, res) => {
     res.send('No Content');
 });
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 9876;
 
 app.listen(port, () => {
-    console.log(`Hey, I am listening on port ${3000}.`);
+    console.log(`Hey, I am listening on port ${port}.`);
 });

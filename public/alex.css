@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    pading: 0;
+    background-color: #e1f5fe;
+}
+
+
+.title {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#title {
+    background-color: #01579b;
+    color: antiquewhite;
+    font-size: 150%;
+    font-weight: 800;
+}
