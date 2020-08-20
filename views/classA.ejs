@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <h1>台大node.js班學生資料</h1>
+	<head>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+	<h1>台大node.js班學生資料</h1>
 
-    <body>
-        <div class="content">
-            <form id="add-students-form">
-                <input type="text" name="name" placeholder="輸入 Student's name">
-                <input type="text" name="gender" placeholder="輸入 Student's gender">
-                <input type="text" name="age" placeholder="輸入 Student's age">
-                <button class="insert">新　增</button>
-            </form>
-            <table id="stu-table" cellpadding="10" border="1" width="100%">
-                　<tr>
-                    　 <td>姓名</td>
-                    　 <td>年齡</td>
-                    <td>性別</td>
-                    <td>刪除</td>
-                    　
-                </tr>
-                <% for(let i = 0 ; i < users.length; i++) {%>
-                <tr data-id="<%= users[i].id %>">
-                    <td><%= users[i].name %></td>
-                    <td><%= users[i].age %></td>
-                    <td><%= users[i].gender %></td>
-                    <td>
-                        <div class="trash-box" id="delete-me" cross-id="<%= users[i].id %>">🗑</div>
-                    </td>
-                </tr>
-                <% } %>
-            </table>
-        </div>
-    </body>
-    <script src="backend_setEvent.js"></script>
+	<body>
+		<div class="content">
+			<form id="add-students-form">
+				<input type="text" name="name" placeholder="輸入 Student's name">
+				<input type="text" name="gender" placeholder="輸入 Student's gender">
+				<input type="text" name="age" placeholder="輸入 Student's age">
+				<button class="insert">新　增</button>
+			</form>
+			<table id="stu-table" cellpadding="10" border="1" width="100%">
+				<tr>
+					<td>姓名</td>
+					<td>性別</td>
+					<td>年齡</td>
+					<td>刪除</td>
+					　
+				</tr>
+				<% for(let i = 0 ; i < users.length; i++) {%>
+				<tr data-id="<%= users[i].id %>">
+					<td><%= users[i].name %></td>
+					<td><%= users[i].gender %></td>
+					<td><%= users[i].age %></td>
+					<td>
+						<div class="trash-box" id="delete-me" cross-id="<%= users[i].id %>">🗑</div>
+					</td>
+				</tr>
+				<% } %>
+			</table>
+		</div>
+	</body>
+	<script src="backend_setEvent.js"></script>
 
 </html>
