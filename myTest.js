@@ -1,6 +1,3 @@
-var r = confirm("Press the button");
-if (r == true) {
-   alert("You are right");
-} else {
-   alert("You are wrong");
-}
+let s = '123'
+let i = parseInt(s)
+console.log(i, typeof (i))
