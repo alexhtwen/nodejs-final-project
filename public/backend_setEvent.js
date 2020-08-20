@@ -6,9 +6,9 @@ for (let i = 0; i < cross.length; i++) {
         let id = cross[i].getAttribute('cross-id');
         console.log(id);
         // local
-        let apiUrl = `http://127.0.0.1:9876/API/deleteStudent?id=${id}`
+        // let apiUrl = `http://127.0.0.1:9876/API/deleteStudent?id=${id}`
         // heroku
-        let apiUrl = `https://nodejs-final-project-alex.herokuapp.com/API/deleteStudent?id=${id}`
+        let apiUrl = `https://nodejs-final-project-alex.herokuapp.com:9876/API/deleteStudent?id=${id}`
         // https://nodejs-final-project-alex.herokuapp.com/
         let res = await fetch(apiUrl, {
             method: 'GET'
@@ -30,7 +30,7 @@ form.addEventListener('submit', async (e) => {
     gender = form.gender.value;
     age = form.age.value;
     // let apiUrl = `http://127.0.0.1:9876/API/addStudent?name=${name}&gender=${gender}&age=${age}`
-    let apiUrl = `https://nodejs-final-project-alex.herokuapp.com/API/addStudent?name=${name}&gender=${gender}&age=${age}`
+    let apiUrl = `https://nodejs-final-project-alex.herokuapp.com:9876/API/addStudent?name=${name}&gender=${gender}&age=${age}`
 
     let res = await fetch(apiUrl, {
         method: 'GET'
