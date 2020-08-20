@@ -83,3 +83,11 @@ button {
 .insert {
     font-size: 120%;
 }
+
+.insert:hover {
+    cursor: pointer;
+}
+
+.trash-box:hover {
+    cursor: pointer;
+}
