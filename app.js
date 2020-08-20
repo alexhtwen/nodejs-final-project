@@ -59,8 +59,8 @@ app.get("/class", async (req, res) => {
       userArr.push({
          id: doc.id,
          name: doc.data().name,
-         age: doc.data().age,
-         gender: doc.data().gender
+         gender: doc.data().gender,
+         age: doc.data().age
       })
    })
    res.render('classA', {
@@ -120,8 +120,8 @@ app.get('/API/deleteStudent', (req, res) => {
 app.get('/API/addStudent', (req, res) => {
    let thisStudent = {
       name: req.query.name,
-      gender: req.query.age,
-      age: req.query.gender
+      gender: req.query.gender,
+      age: req.query.age
    }
    db.collection('classA').add(thisStudent);
    console.log(`log: Student ${thisStudent.name} successfully added.`);
@@ -132,8 +132,8 @@ app.get('/API/addStudent', (req, res) => {
 // app.get('/API/addStudent', (req, res) => {
 //     db.collection('classA').add({
 //         name: req.query.name,
-//         gender: req.query.age,
-//         age: req.query.gender
+//         gender: req.query.gender,
+//         age: req.query.age
 //     });
 //     console.log("Add student !!");
 //     res.send("Add student success!");

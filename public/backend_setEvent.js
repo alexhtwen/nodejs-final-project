@@ -17,8 +17,9 @@ for (let i = 0; i < cross.length; i++) {
         console.log(text);
         console.log(`id:${id} being deleted...`);
         // call delete api
-        // location.reload(true);
-        res.redirect('back');
+        alert('This document has been deleted.')
+        location.reload();
+
     });
 }
 // add data
