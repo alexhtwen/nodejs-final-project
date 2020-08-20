@@ -79,7 +79,7 @@ app.get("/classA_frontend", (req, res) => {
 
 app.get('/greet/:name', (req, res) => {
    let name = req.params.name;
-   res.send(`<h1>How are you doing? ${name}</h1>`);
+   res.send(`<h1>How are you doing, ${name}?</h1>`);
 });
 
 
