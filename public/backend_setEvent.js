@@ -9,8 +9,6 @@ for (let i = 0; i < cross.length; i++) {
         // let apiUrl = `http://127.0.0.1:9876/API/deleteStudent?id=${id}`
         // heroku
         let apiUrl = `https://nodejs-final-project-alex.herokuapp.com/API/deleteStudent?id=${id}`
-        // 以下這列是clone自其他同學的code，經核對和我的相同，但這位同學可以新增刪除，我卻不行。原因不詳。
-        // let apiUrl = `https://nodejs-practice2020.herokuapp.com/API/deleteMember?id=${id}`
 
         let res = await fetch(apiUrl, {
             method: 'GET'
