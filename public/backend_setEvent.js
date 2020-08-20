@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
     // alert('New student adding...')
     name = form.name.value;
     gender = form.gender.value;
-    age = parseInt(form.age.value);
+    age = form.age.value;
     // local
     // let apiUrl = `http://127.0.0.1:9876/API/addStudent?name=${name}&gender=${gender}&age=${age}`
     // heroku

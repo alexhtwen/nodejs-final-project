@@ -121,7 +121,7 @@ app.get('/API/addStudent', (req, res) => {
    let thisStudent = {
       name: req.query.name,
       gender: req.query.gender,
-      age: req.query.age
+      age: parseInt(req.query.age)
    }
    db.collection('classA').add(thisStudent);
    console.log(`log: Student ${thisStudent.name} successfully added.`);
