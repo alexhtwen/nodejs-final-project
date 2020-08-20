@@ -27,9 +27,10 @@ app.get('/', async (req, res) => {
 
     // res.render('default', {
     res.render('home', {
-        title: '台大資訊訓練班332期node.js課期末作業--Alex',
+        header: 'node.js期末作業--Alex',
+        title: '本網站可用的routes:',
         // users: ['Alex', 'Marrianne', 'Rebecca', 'Thomas', 'Asing']
-        routes: ['/', 'alex', 'firebase-test', '/who/:name', '/API/addMember', '/API/deleteMember']
+        routes: ['/ (本頁)', '/alex (Alex專頁)', '/firebase-test (??)', '/who/{name} (列出特定會員)', '/API/addMember (新增會員)', '/API/deleteMember (刪除會員)']
         //users: userArr
     });
 });
@@ -83,8 +84,9 @@ app.get('/API/deleteMember', (req, res) => {
     db.collection('classA').doc(req.query.id).delete();
     // console.log(req.query.id);
     // res.send(`delete Member id = ${req.query.id}!`)
-    let prompt = `Member id: ${req.query.id} deleted.`;
-    // console.log(prompt);
+    let prompt = `Student id: ${req.query.id} deleted.`;
+
+    // location.reload();
     console.log(`log: ${prompt}`);
     res.send(`${prompt}`);
 })
@@ -95,12 +97,23 @@ app.get('/API/addMember', (req, res) => {
         gender: req.query.age,
         age: req.query.gender
     }
-    db.collection('classA').add({
-        thisMember
-    });
+    db.collection('classA').add(thisMember);
     console.log(`log: Member ${thisMember.name} successfully added.`);
     res.send(`Member ${thisMember.name} successfully added.`);
 })
+
+
+// app.get('/API/addMember', (req, res) => {
+//     db.collection('classA').add({
+//         name: req.query.name,
+//         gender: req.query.age,
+//         age: req.query.gender
+//     });
+//     console.log("Add member !!");
+//     res.send("Add member success!");
+// })
+
+
 
 app.get('*', (req, res) => {
     res.send('No Content');

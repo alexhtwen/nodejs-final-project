@@ -1,29 +1,31 @@
-body{
-    background: #1dbcca;
+body {
+    /* background: #1dbcca; */
+    background-color: #E1F1FF;
     font-family: ubuntu;
 }
 
-h1{
-    color: #fff;
+h1 {
+    color: rgb(151, 7, 43);
     font-size: 64px;
     letter-spacing: 2px;
     margin-top: 80px;
     text-align: center;
 }
 
-.content{
+.content {
     background: #fff;
     max-width: 960px;
     margin: 30px auto;
-    padding:  20px 30px;
+    padding: 20px 30px;
     border-radius: 10px 120px 10px 10px;
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1)
 }
 
 tr {
     list-style-type: none;
     padding: 0;
 }
+
 td {
     padding: 20px;
     background: #f6f6f6;
@@ -35,11 +37,11 @@ td {
 }
 
 table {
-    border:8px rgb(240, 139, 181) groove; 
-    border-radius:25px;
+    border: 8px rgb(240, 139, 181) groove;
+    border-radius: 25px;
 }
 
-form input{
+form input {
     float: left;
     width: 25%;
     margin: 0;
@@ -52,28 +54,32 @@ form input{
     font-size: 18px;
 }
 
-form input:focus{
+form input:focus {
     outline: none;
     border-bottom: 3px solid #88236f;
     padding-bottom: 8px;
     transition: all ease 0.2s;
 }
 
-form:after{
+form:after {
     content: '';
     clear: both;
     display: block;
 }
 
-button{
+button {
     border: 0;
     background: rgb(236, 221, 221);
     border-radius: 10px;
     padding: 13px;
     width: 10%;
-    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+    box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1);
     font-weight: bold;
     font-family: ubuntu;
     letter-spacing: 1px;
     color: #999;
+}
+
+.insert {
+    font-size: 120%;
 }

@@ -9,12 +9,20 @@
 
   <body>
     <!-- <span class='title'><%= title %></span> -->
-    <h1 class='title'><span id='title'><%= title %></span></h1>
-    <ul>
-      <% for(let i=0; i < routes.length; i++) {%>
-      <li><%= routes[i] %></li>
-      <% } %>
-    </ul>
+    <div>
+      <h1 class='header'><span id='page-header'><%= header %></span></h1>
+    </div>
+    <div>
+      <h2 class='title'><span id='route-title'><%= title %></span></h2>
+    </div>
+
+    <div class="items-block">
+      <ul class='items'>
+        <% for(let i=0; i < routes.length; i++) {%>
+        <li class='item'><%= routes[i] %></li>
+        <% } %>
+      </ul>
+    </div>
   </body>
 
 </html>
